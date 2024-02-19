@@ -1,0 +1,4 @@
+upload_channel:
+- sfe1ed40
+channels:
+  - https://staging.continuum.io/prefect/fs/avro-feedstock/pr2/c16245c
