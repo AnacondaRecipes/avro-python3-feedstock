@@ -12,18 +12,20 @@ source:
 
 build:
   number: 0
-  noarch: python
-  script: {{ PYTHON }} -m pip install . -vv
+  script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -v
+  skip: True  # [win]
 
 requirements:
   host:
-    - python >=3.6
+    - python
+    - setuptools
+    - wheel
     - avro
     - isort
     - pip
     - pycodestyle
   run:
-    - python >=3.6
+    - python
 
 test:
   imports:
@@ -38,6 +40,16 @@ about:
   summary: Avro is a serialization and RPC framework.
   license: Apache-2.0
   license_file: avro/LICENSE
+  description: |
+    avro-python3 is no longer maintained and is deprecated in favor of avro.
+
+    Apache Avro is the leading serialization format for record data,
+    and first choice for streaming data pipelines. It offers excellent
+    schema evolution, and has implementations for the JVM (Java, Kotlin,
+    Scala, …), Python, C/C++/C#, PHP, Ruby, Rust, JavaScript, and even Perl.
+  dev_url: https://avro.apache.org
+  doc_url: https://avro.apache.org/docs/
+  license_family: APACHE
 
 extra:
   recipe-maintainers:
