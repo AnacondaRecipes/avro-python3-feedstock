@@ -13,10 +13,11 @@ source:
 build:
   number: 0
   script: {{ PYTHON }} -m pip install . --no-deps --no-build-isolation -v
+  skip: True  # [win]
 
 requirements:
   host:
-    - python
+    - python  
     - avro
     - isort
     - pip
