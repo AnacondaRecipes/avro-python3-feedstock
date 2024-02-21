@@ -20,7 +20,6 @@ requirements:
     - python
     - setuptools
     - wheel
-    - avro
     - isort
     - pip
     - pycodestyle
