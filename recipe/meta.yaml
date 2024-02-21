@@ -29,6 +29,11 @@ requirements:
 test:
   imports:
     - avro
+    - avro.io
+    - avro.datafile
+    - avro.protocol
+    - avro.schema
+    - avro.ipc
   commands:
     - pip check
   requires:
